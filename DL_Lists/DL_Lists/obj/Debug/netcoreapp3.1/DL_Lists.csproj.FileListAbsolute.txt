@@ -1,0 +1,13 @@
+C:\Users\mbm6415\source\repos\DL_Lists\DL_Lists\obj\Debug\netcoreapp3.1\DL_Lists.csprojAssemblyReference.cache
+C:\Users\mbm6415\source\repos\DL_Lists\DL_Lists\obj\Debug\netcoreapp3.1\DL_Lists.AssemblyInfoInputs.cache
+C:\Users\mbm6415\source\repos\DL_Lists\DL_Lists\obj\Debug\netcoreapp3.1\DL_Lists.AssemblyInfo.cs
+C:\Users\mbm6415\source\repos\DL_Lists\DL_Lists\obj\Debug\netcoreapp3.1\DL_Lists.csproj.CoreCompileInputs.cache
+C:\Users\mbm6415\source\repos\DL_Lists\DL_Lists\bin\Debug\netcoreapp3.1\DL_Lists.exe
+C:\Users\mbm6415\source\repos\DL_Lists\DL_Lists\bin\Debug\netcoreapp3.1\DL_Lists.deps.json
+C:\Users\mbm6415\source\repos\DL_Lists\DL_Lists\bin\Debug\netcoreapp3.1\DL_Lists.runtimeconfig.json
+C:\Users\mbm6415\source\repos\DL_Lists\DL_Lists\bin\Debug\netcoreapp3.1\DL_Lists.runtimeconfig.dev.json
+C:\Users\mbm6415\source\repos\DL_Lists\DL_Lists\bin\Debug\netcoreapp3.1\DL_Lists.dll
+C:\Users\mbm6415\source\repos\DL_Lists\DL_Lists\bin\Debug\netcoreapp3.1\DL_Lists.pdb
+C:\Users\mbm6415\source\repos\DL_Lists\DL_Lists\obj\Debug\netcoreapp3.1\DL_Lists.dll
+C:\Users\mbm6415\source\repos\DL_Lists\DL_Lists\obj\Debug\netcoreapp3.1\DL_Lists.pdb
+C:\Users\mbm6415\source\repos\DL_Lists\DL_Lists\obj\Debug\netcoreapp3.1\DL_Lists.genruntimeconfig.cache
