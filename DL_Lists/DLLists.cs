@@ -3,33 +3,40 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text.Json;
 
 namespace DL_Lists
 {
     class DLLists
     {
-        static string filePath;
+        static string inputFilePath;
         static string outputFilePath;
 
         static void Main(string[] args)
         {
-            filePath = ValidatesInputFileAndPath();
-            outputFilePath = CreatesOutputPath(filePath);
-            var dlsOwners = ReadInDLsAndOwners();
-            using (StreamWriter writeDLtoCSV = new StreamWriter(outputFilePath))
-                foreach (var kvp in dlsOwners)
-                {
-                    List<string> valuesList = kvp.Value;
-                    string joinValues = string.Join(", ", valuesList);
-                    writeDLtoCSV.WriteLine($"{kvp.Key}, {joinValues}");
-                }
+            try
+            {
+                inputFilePath = ValidateInputFileAndPath();
+                outputFilePath = CreateOutputPath(inputFilePath);
+                var dlsOwners = ReadInDLsAndOwners();
+                using (var writeDLtoCSV = new StreamWriter(outputFilePath))
+                    foreach (var kvp in dlsOwners)
+                    {
+                        List<string> valuesList = kvp.Value;
+                        string joinValues = string.Join(", ", valuesList);
+                        writeDLtoCSV.WriteLine($"{kvp.Key}, {joinValues}");
+                    }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("The application has encountered an unknown error. Please contact techincal staff");
+            }
+
         }
 
         private static Dictionary<string, List<string>> ReadInDLsAndOwners()
         {
             var dlPairs = new Dictionary<string, List<string>>();
-            using (StreamReader readDLfile = new StreamReader(filePath))
+            using (StreamReader readDLfile = new StreamReader(inputFilePath))
             {
                 readDLfile.ReadLine();
                 while (!readDLfile.EndOfStream)
@@ -55,8 +62,9 @@ namespace DL_Lists
 
         }
 
-        private static string ValidatesInputFileAndPath()
+        private static string ValidateInputFileAndPath()
         {
+
             Console.WriteLine("Enter path to txt file");
             string filePath = Console.ReadLine();
             string fileExtension = Path.GetExtension(filePath);
@@ -67,9 +75,8 @@ namespace DL_Lists
                 fileExtension = Path.GetExtension(filePath);
             }
             return filePath;
-
         }
-        private static string CreatesOutputPath(string filePath)
+        private static string CreateOutputPath(string filePath)
         {
             string directoryPath = Path.GetDirectoryName(filePath);
             string dateTime = DateTime.Now.ToString("yyyyMMddHHmmssff");
